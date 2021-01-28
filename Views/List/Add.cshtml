@@ -1,0 +1,29 @@
+@model MVC.Models.KindThings
+@{
+    ViewData["Titel"] = "Snälla saker";
+}
+
+<h1>Snälla saker</h1>
+<partial name="_ListMenu" />
+
+ 
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="Thing">Skriv in din komplimang</label> <br>
+    <input asp-for="Thing"> <span asp-validation-for="Thing"></span> <br>
+
+    <label asp-for="Color" >Välj vilken bakgrundsfärg du vill ha:</label> <br>
+    <input asp-for="Color" type="radio" name="Color" value="Röd"> Röd </input> <br>
+    <input asp-for="Color" type="radio" name="Color" value="Lila"> Lila </input> <br>
+    <input asp-for="Color" type="radio" name="Color" value="Rosa"> Rosa </input> <br>
+
+    <label asp-for="Textcolor" >Välj vilken textfärg du vill ha:</label> <br>
+    <select name="Textcolor">
+        <option value="Black">Svart</option>
+        <option value="White">Vit</option>
+    </select> <br>
+
+
+
+    <input type="submit">
+</form>  

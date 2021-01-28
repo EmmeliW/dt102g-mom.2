@@ -1,0 +1,15 @@
+@model List<MVC.Models.KindThings>
+@{
+    ViewData["Titel"] = "Snälla saker";
+}
+
+<h1>Snälla saker</h1>
+<partial name="_ListMenu" />
+
+@foreach (var item in Model)
+{ 
+    <div class="@item.Color">
+            <p class="@item.Textcolor">@item.Thing</p>
+    </div>
+}
+
