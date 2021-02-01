@@ -9,10 +9,16 @@ namespace MVC.Controllers
 { 
     public class HomeController : Controller
     {
+        [HttpGet("/Hem")]
         public IActionResult Index([FromQuery]string name) 
         {
+            if(name == null)
+            {
+                return View("WrongPage");
+            }
 
-            ViewBag.Greeting  = "Välkommen till min trevliga sida!";
+            HttpContext.Session.SetString("name", name);
+            ViewBag.output = "Välkommen " + name + ", till min sida!";
 
             ViewData["images"] = new List<string>{
                 "flower.jpg",
@@ -22,9 +28,6 @@ namespace MVC.Controllers
                 "hill.jpg",
                 "water.jpg"
             };
-
-            HttpContext.Session.SetString("name", name);
-            ViewBag.output = "Välkommen, " + name + " till denna trevliga sida!";
             return View();
 
         }

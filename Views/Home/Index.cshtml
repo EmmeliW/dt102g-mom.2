@@ -3,15 +3,17 @@
     ViewData["Titel"] = "Startsidan";
 }
 
-<h1>Startsidan</h1>
-<h2>@ViewBag.Greeting</h2>
-<h3></h3>
+<div class="startpage">
+    <h1>Startsidan</h1>
+    <p>@ViewBag.output</p>
 
-<p>@ViewBag.output</p>
+    <div class="img-flex">
+        @foreach (string item in (List<string>)ViewData["images"])
+            {
+                <img src="~/images/@item" alt="Bild">
+            }
+        
+    </div>
+</div>
 
 
-@foreach (string item in (List<string>)ViewData["images"])
-    {
-        <img src="~/images/@item" alt="Bild">
-    }
-  

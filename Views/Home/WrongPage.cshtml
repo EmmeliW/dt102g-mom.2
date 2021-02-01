@@ -2,15 +2,19 @@
     ViewData["Titel"] = "Fel Startsida";
 }
 
-<h1>Inte startsidan</h1>
-<h2>@ViewBag.Greeting</h2>
+
+<div class="not-start">
+    <h1>Inte startsidan</h1>
+    <h2>@ViewBag.Greeting</h2>
 
 
-<p>Skriv in ditt namn</p>
+    <p>Skriv in ditt namn för att komma vidare till startsidan</p>
 
 
-<form asp-controller="Home" asp-action="Index" method="get">
-    <input name="name" type="text" required>
-    <input type="submit" value="Skicka">
-</form>
+    <form class="name-form" asp-controller="Home" asp-action="Index" method="get">
+        <input name="name" type="text" required>
+        <input type="submit" value="Vidare till startsidan">
+    </form>
+</div>
+
 

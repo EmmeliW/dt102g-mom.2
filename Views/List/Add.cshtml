@@ -3,27 +3,30 @@
     ViewData["Titel"] = "Snälla saker";
 }
 
-<h1>Snälla saker</h1>
-<partial name="_ListMenu" />
+<div class="kindness">
+    <partial name="_ListMenu2" />  
+    
+    <form method="post">
+        <span asp-validation-for="Thing"></span>
+        <div asp-validation-summary="ModelOnly"></div>
+        <label class="block"  asp-for="Thing">Lämna komplimang:</label>
+        <input class="block"  asp-for="Thing">
+        
+        <span asp-validation-for="Color"></span>
+        <label class="block" asp-for="Color" >Bakgrundsfärg:</label>
+        <input asp-for="Color" type="radio" name="Color" value="red"> Röd </input> <br>
+        <input asp-for="Color" type="radio" name="Color" value="purple"> Lila </input> <br>
+        <input asp-for="Color" type="radio" name="Color" value="pink"> Rosa </input>
+        
+        <span asp-validation-for="Textcolor"></span>
+        <label class="block text"  asp-for="Textcolor" >Textfärg:</label>
+        <select name="Textcolor">
+            <option value="black">Svart</option>
+            <option value="white">Vit</option>
+        </select>
+        <input class="block"  type="submit">
+    </form> 
 
- 
-<form method="post">
-    <div asp-validation-summary="ModelOnly"></div>
-    <label asp-for="Thing">Skriv in din komplimang</label> <br>
-    <input asp-for="Thing"> <span asp-validation-for="Thing"></span> <br>
 
-    <label asp-for="Color" >Välj vilken bakgrundsfärg du vill ha:</label> <br>
-    <input asp-for="Color" type="radio" name="Color" value="Röd"> Röd </input> <br>
-    <input asp-for="Color" type="radio" name="Color" value="Lila"> Lila </input> <br>
-    <input asp-for="Color" type="radio" name="Color" value="Rosa"> Rosa </input> <br>
-
-    <label asp-for="Textcolor" >Välj vilken textfärg du vill ha:</label> <br>
-    <select name="Textcolor">
-        <option value="Black">Svart</option>
-        <option value="White">Vit</option>
-    </select> <br>
-
-
-
-    <input type="submit">
-</form>  
+    <partial name="_ComplimentList" />
+</div>

@@ -1,0 +1,8 @@
+    <p class="listheading">Komplimanger i listan:</p>
+    
+      @foreach (var item in ViewBag.Kindness)
+    { 
+        <div class="comploment-list">
+                <p class="item">@item.Thing</p>
+        </div>
+    }

@@ -40,4 +40,6 @@ C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\obj\Debug\net5.0\R
 C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\bin\Debug\net5.0\KindThings.json
 C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\obj\Debug\net5.0\Razor\Views\Home\WrongPage.cshtml.g.cs
 C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\obj\Debug\net5.0\Razor\Views\List\Add.cshtml.g.cs
-C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\obj\Debug\net5.0\Razor\Views\Shared\_ListMenu.cshtml.g.cs
+C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\obj\Debug\net5.0\Razor\Views\Shared\_ComplimentList.cshtml.g.cs
+C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\obj\Debug\net5.0\Razor\Views\Shared\_ListMenu1.cshtml.g.cs
+C:\Users\emmel\OneDrive\Skrivbord\ASP.NET med C#\Moment 2\MVC\obj\Debug\net5.0\Razor\Views\Shared\_ListMenu2.cshtml.g.cs

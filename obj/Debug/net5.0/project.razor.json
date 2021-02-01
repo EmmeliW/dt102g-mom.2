@@ -15618,8 +15618,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\emmel\\OneDrive\\Skrivbord\\ASP.NET med C#\\Moment 2\\MVC\\Views\\Shared\\_ListMenu.cshtml",
-      "TargetPath": "Views\\Shared\\_ListMenu.cshtml",
+      "FilePath": "c:\\Users\\emmel\\OneDrive\\Skrivbord\\ASP.NET med C#\\Moment 2\\MVC\\Views\\Shared\\_ListMenu1.cshtml",
+      "TargetPath": "Views\\Shared\\_ListMenu1.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\emmel\\OneDrive\\Skrivbord\\ASP.NET med C#\\Moment 2\\MVC\\Views\\Shared\\_ListMenu2.cshtml",
+      "TargetPath": "Views\\Shared\\_ListMenu2.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\emmel\\OneDrive\\Skrivbord\\ASP.NET med C#\\Moment 2\\MVC\\Views\\Shared\\_ComplimentList.cshtml",
+      "TargetPath": "Views\\Shared\\_ComplimentList.cshtml",
       "FileKind": "mvc"
     },
     {

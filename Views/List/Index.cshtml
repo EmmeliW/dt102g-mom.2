@@ -3,13 +3,23 @@
     ViewData["Titel"] = "Snälla saker";
 }
 
-<h1>Snälla saker</h1>
-<partial name="_ListMenu" />
+<div class="kindness-list">
 
-@foreach (var item in Model)
-{ 
-    <div class="@item.Color">
-            <p class="@item.Textcolor">@item.Thing</p>
-    </div>
-}
+    <section>
+        <h2>Här finns några komplimanger till dig</h2>
 
+        @foreach (var item in Model)
+        { 
+            <div class="@item.Color compliment">
+                    <p class="@item.Textcolor">@item.Thing</p>
+            </div>
+        }
+    </section>
+    
+    <partial name="_ListMenu1" /> 
+</div>
+
+
+
+
+ 

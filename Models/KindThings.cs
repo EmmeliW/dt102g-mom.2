@@ -6,7 +6,7 @@ namespace MVC.Models
     public class KindThings
     {        
         [Required(ErrorMessage = "Du måste skiva i")]
-        [MinLength(5)]
+        [MinLength(5, ErrorMessage = "Det måste vara minst fem tecken i komplimangen")]
         public string Thing { get; set; }
         [Required(ErrorMessage = "Du måste välja färg")]
         public string Color { get; set; }

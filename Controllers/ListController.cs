@@ -10,7 +10,7 @@ namespace MVC.Controllers
 {
     public class ListController : Controller
     {
-        [Route ("/SnällaSaker")]
+        [HttpGet("/Komplimanger")]
         public IActionResult Index()  
         {            
             // Läs in JSON-fil och parsa
@@ -19,12 +19,18 @@ namespace MVC.Controllers
             return View(JsonObj);
         }
 
+        
+        [HttpGet("/LäggTill")]
         public IActionResult Add()  
         {            
+            var JsonStr = System.IO.File.ReadAllText("KindThings.json");
+            var JsonThings = JsonConvert.DeserializeObject<List<KindThings>>(JsonStr);
+            ViewBag.Kindness = JsonThings;
             return View();
         }
-
-        [HttpPost]
+ 
+        
+        [HttpPost("/LäggTill")]
         public IActionResult Add(KindThings model) 
         {
             if(ModelState.IsValid)
@@ -39,6 +45,11 @@ namespace MVC.Controllers
                 //rensa formuläret
                 ModelState.Clear();
             }
+
+            var JsonStr = System.IO.File.ReadAllText("KindThings.json");
+            var JsonThings = JsonConvert.DeserializeObject<List<KindThings>>(JsonStr);
+            ViewBag.Kindness = JsonThings;
+            
             return View();
         }
     }    
