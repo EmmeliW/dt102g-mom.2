@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using MVC.Models;
@@ -13,7 +10,7 @@ namespace MVC.Controllers
         [HttpGet("/Komplimanger")]
         public IActionResult Index()  
         {            
-            // Läs in JSON-fil och parsa
+            // Read in JSON an parse
             var JsonStr = System.IO.File.ReadAllText("KindThings.json");
             var JsonObj = JsonConvert.DeserializeObject<List<KindThings>>(JsonStr) ?? new List<KindThings>();
             return View(JsonObj);
@@ -22,9 +19,11 @@ namespace MVC.Controllers
         
         [HttpGet("/LäggTill")]
         public IActionResult Add()  
-        {            
+        {           
+            // Read in JSON an parse 
             var JsonStr = System.IO.File.ReadAllText("KindThings.json");
             var JsonThings = JsonConvert.DeserializeObject<List<KindThings>>(JsonStr);
+            // Send it with viewbag
             ViewBag.Kindness = JsonThings;
             return View();
         }
@@ -35,17 +34,18 @@ namespace MVC.Controllers
         {
             if(ModelState.IsValid)
             {
-                //Läs in den jsom fil som finns
+                // Reas in JSON
                 var jsonStr = System.IO.File.ReadAllText("KindThings.json");
                 var JsonObj = JsonConvert.DeserializeObject<List<KindThings>>(jsonStr);
-                //lägg till den nya till den befintliga
+                // Add the new
                 JsonObj.Add(model);
-                //serialisera den igen
+                // Serialise
                 System.IO.File.WriteAllText("KindThings.json" , JsonConvert.SerializeObject(JsonObj, Formatting.Indented));
-                //rensa formuläret
+                //Clean form
                 ModelState.Clear();
             }
 
+            // Read in JSON an parse 
             var JsonStr = System.IO.File.ReadAllText("KindThings.json");
             var JsonThings = JsonConvert.DeserializeObject<List<KindThings>>(JsonStr);
             ViewBag.Kindness = JsonThings;

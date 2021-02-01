@@ -8,6 +8,7 @@
     <p>@ViewBag.output</p>
 
     <div class="img-flex">
+        @* Loop trough list with names of images *@
         @foreach (string item in (List<string>)ViewData["images"])
             {
                 <img src="~/images/@item" alt="Bild">
